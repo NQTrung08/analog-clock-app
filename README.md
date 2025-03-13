@@ -1,12 +1,19 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+1. clone project from github: https://github.com/NQTrung08/analog-clock-app.git
 
-Currently, two official plugins are available:
+    ```cmd
+      git clone: https://github.com/NQTrung08/analog-clock-app.git
+    ```
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+2. Install node_modules
 
-## Expanding the ESLint configuration
+    ```cmd
+      npm install
+    ```
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+3. Launch project
+
+    ```cmd
+      npm run dev
+    ```

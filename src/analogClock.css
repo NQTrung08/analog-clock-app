@@ -1,3 +1,48 @@
-.clock {
-  color: black;
+
+.clock__wrapper {
+  height: 600px;
+  width: 600px;
+  background-color: rgb(248, 248, 248);
+  border-radius: 50%;
+  border: 20px solid #493b31;
+  box-shadow: 0 4px 12px rgba(0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.dot-center {
+  width: 10px;
+  height: 10px;
+  background-color: #493b31;
+  border-radius: 50%;
+  z-index: 2;
+}
+.hand {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.hand-item {
+  position: absolute;
+  transform-origin: center bottom;
+  border-top-right-radius: 50%;
+  border-top-left-radius: 50%;
+}
+
+.number {
+  position: absolute;
+  text-align: center;
+  top: 30px;
+  left: 30px;
+  right: 30px;
+  bottom: 30px;
+}
+
+.number span {
+  display: block;
+  font-weight: bold;
 }
