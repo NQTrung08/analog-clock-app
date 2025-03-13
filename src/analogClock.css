@@ -1,21 +1,77 @@
+@media only screen and (max-width: 739px) {
+  .clock__wrapper {
+    height: 300px;
+    width: 300px;
+  }
+  .hour{
+    height: 40px;
+    width: 6px;
+  }
+  .minute{
+    height: 80px;
+    width: 4px;
+  }
+  .second{
+    height: 100px;
+    width: 2px;
+  }
+}
+
+@media only screen and (min-width: 740px) and (max-width: 1023px) {
+  .clock__wrapper {
+    height: 400px;
+    width: 400px;
+  }
+  .hour{
+    height: 80px;
+    width: 6px;
+  }
+  .minute{
+    height: 120px;
+    width: 4px;
+  }
+  .second{
+    height: 160px;
+    width: 2px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .clock__wrapper {
+    height: 600px;
+    width: 600px;
+  }
+  .hour{
+    height: 140px;
+    width: 8px;
+  }
+  .minute{
+    height: 200px;
+    width: 4px;
+  }
+  .second{
+    height: 240px;
+    width: 2px;
+  }
+}
+
+
 
 .clock__wrapper {
-  height: 600px;
-  width: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: rgb(248, 248, 248);
   border-radius: 50%;
   border: 20px solid #493b31;
   box-shadow: 0 4px 12px rgba(0, 0, 0.8);
-  display: flex;
-  align-items: center;
-  justify-content: center;
   position: relative;
 }
 
 .dot-center {
   width: 10px;
   height: 10px;
-  background-color: #493b31;
+  background-color: #a59c95;
   border-radius: 50%;
   z-index: 2;
 }
@@ -32,6 +88,7 @@
   border-top-right-radius: 50%;
   border-top-left-radius: 50%;
 }
+
 
 .number {
   position: absolute;

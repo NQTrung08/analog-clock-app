@@ -19,15 +19,16 @@ export const AnalogClock = () => {
       const hour = date.getHours()
       const minute = date.getMinutes()
       const second = date.getSeconds()
+      console.log(hour, minute, second);
       setClock(prev => {
         return {
           ...prev,
-          hour: hour % 12,
-          minute: minute % 60,
-          second: second % 60,
+          hour: hour,
+          minute: minute,
+          second: second,
           secondHand: second * 6,
-          minuteHand: minute * 6,
-          hourHand: (hour * 30) + (minute / 2)
+          minuteHand: minute * 6, // mỗi bước nhảy mất 6 deg
+          hourHand: (hour * 30) + (minute / 2) // mỗi giờ mất 30deg, 60 phút mất 30deg (1 phút mất 0.5deg)      
         }
       })
 
@@ -61,7 +62,7 @@ const NumberClock = () => {
       <div key={index} className='number'
         style={
           {
-            transform: `rotate(${30 * number}deg)`,
+            transform: `rotate(${30 * number}deg)`, // mỗi số cách nhau 30 độ (360/12) => cách số 12 theo 30.n
             fontSize: `${number % 3 == 0 ? '32px' : '24px'}`,
           }
         }
@@ -69,7 +70,7 @@ const NumberClock = () => {
         <span
           style={
             {
-              transform: `rotate(${-30 * number}deg)`,
+              transform: `rotate(${-30 * number}deg)`, // xoay chữ lại theo số độ 30n cho thẳng đứng số
             }
           }
         >{number}</span>
@@ -109,29 +110,13 @@ const ItemSecond = ({ deg, numbers }) => {
 }
 
 const HandItem = ({ type, deg }) => {
-  let height = '100px'
-  let backgroundColor = '#333'
-  let width = '8px'
-  if (type === 'hour') {
-    height = '100px'
-    backgroundColor = '#333'
-  }
-  if (type ==='minute') {
-    height = '200px'
-    backgroundColor = '#666',
-    width = '4px'
-  }
-  if (type ==='second') {
-    height = '240px'
-    backgroundColor = '#aa2b2b'
-    width = '2px'
-  }
+  let backgroundColor = '#666';
+  if (type === 'minute') { backgroundColor = '#999'; }
+  if (type === 'second') { backgroundColor = 'red'; }
   return <div className="hand">
-    <span className='hand-item' style={
+    <span className={`hand-item ${type}`} style={
       {
         transform: `rotate(${deg}deg)`,
-        height: height,
-        width: width,
         backgroundColor: backgroundColor,
       }
     }></span>

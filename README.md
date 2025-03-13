@@ -17,3 +17,5 @@
     ```cmd
       npm run dev
     ```
+
+4. View project with vercel: https://analog-clock-app-zeta.vercel.app/ 
